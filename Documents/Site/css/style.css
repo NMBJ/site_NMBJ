@@ -81,9 +81,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .gtco-container {
-  max-width: 1140px;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1453,7 +1452,7 @@ form label {
   }
 }
 #gtco-features-3 .feature {
-  width: 33.33%;
+  width: 10%;
   float: left;
   padding: 30px;
   background: #00B906;

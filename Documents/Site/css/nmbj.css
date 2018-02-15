@@ -3,6 +3,13 @@
   src: url('../fonts/Snowballs Season_PersonalUseOnly.otf');
 }
 
+
+#gtco-features{
+  background: no-repeat;
+  background-size: 100%;
+  background-image:url(../images/micro.png);
+}
+
 .img-pres {
   border-radius: 100px;
 }
@@ -12,4 +19,10 @@
   color: darkcyan;
   font-family: Season_PersonalUseOnly;
 
+}
+
+#citation_pres{
+  font-size: 40px;
+  color: darkcyan;
+  font-family: Season_PersonalUseOnly;
 }
