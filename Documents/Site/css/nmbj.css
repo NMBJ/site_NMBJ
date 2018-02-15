@@ -1,3 +1,15 @@
+@font-face{
+  font-family: 'Season_PersonalUseOnly';
+  src: url('../fonts/Snowballs Season_PersonalUseOnly.otf');
+}
+
 .img-pres {
   border-radius: 100px;
+}
+
+.title_pres{
+  font-size: 60px;
+  color: darkcyan;
+  font-family: Season_PersonalUseOnly;
+
 }
