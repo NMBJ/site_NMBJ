@@ -1,3 +1,5 @@
+this.suiteNote = [];
+
 function afficher(asElement,asImg)
 {
 	//Modification de l'image
@@ -11,39 +13,51 @@ function changeText(asElement,event){
 	var citation = "";
 	var image;
 	var option;
+	var son;
+
 	if(asElement == "#jb_pres"){
 		texte = "Cet amateur de galette saucisse est le grand batteur du groupe. Entre Kir breton et cidre doux, son expérience fait avancer le groupe vers un succès assuré! Jean-Baptiste le jour, et Didier Touchard la nuit, cet énergumène s'improvise DRH d'un claquement de doigt. ";
 		nom = "JB";
-		citation = '"Moins de gaz, il n\'y a plus de bulles dans le jacuzzi..."';
+		citation = '"Moins de gaz, y\'a plus de bulles dans le jacuzzi..."';
 		image = "batterie";
 		option = "qsf";
+		son = "sol";
 	}
 	if(asElement == "#adrien_pres") {
 		texte = "Ce grand charmeur ....";
 		nom = "Adrilll";
+		citation = '"ça va gros malin?"';
 		image = "basse";
 		option = "agi";
+		son = "la";
 	}
 	if(asElement == "#coco_pres") {
 		texte = "Il a tartiné, il a pilé";
 		nom = "CoCo";
+		citation = '"..."';
 		image = "guitare_micro";
 		option = "mis";
+		son = "si";
 	}
 	if(asElement == "#fefe_pres") {
 		texte = "Ce tchatcheur en puissance...";
 		nom = "Feyfey";
+		citation = '"Une salle, une ambiance, une sale ambiance!"';
 		image = "guitare";
 		option = "agi";
 	}
 	if(asElement == "#pierre_pres") {
 		texte = "Le bel aviateur avec sa moustache bien taillée";
 		nom = "Pierro";
+		citation = '"..."';
 		image = "guitare_elec";
 		option = "qsf";
 	}
 
-	if(option == "agi") $(".agi").css('color', '#008B8B');
+	//On ajoute la classe à l'option sélectionnée
+	if(option == "agi"){ $(".agi").addClass("option-selectioned"); $(".agi").removeClass("option-not-selectioned");}
+	if(option == "qsf"){ $(".qsf").addClass("option-selectioned"); $(".qsf").removeClass("option-not-selectioned");}
+	if(option == "mis"){ $(".mis").addClass("option-selectioned"); $(".mis").removeClass("option-not-selectioned");}
 
 
 	if(event == "mouseout"){
@@ -51,16 +65,74 @@ function changeText(asElement,event){
 		nom = "Who?";
 		citation = "";
 		image = "micro";
-	}
+
+		//On enlève la classe sélection à chaque option
+		$(".agi").removeClass("option-selectioned"); $(".agi").addClass("option-not-selectioned");
+		$(".qsf").removeClass("option-selectioned"); $(".qsf").addClass("option-not-selectioned");
+		$(".mis").removeClass("option-selectioned"); $(".mis").addClass("option-not-selectioned");
+
+		//Animation : Photo qui tourne dans le sens inverse des aiguilles d'une montre
+		$(asElement).addClass("artist-not-selectionned");
+		$(asElement).removeClass("artist-selectionned");
+
+	}else{
+		//Animation : Photo qui tourne dans le sens des aiguilles d'une montre
+		$(asElement).addClass("artist-selectionned");
+		$(asElement).removeClass("artist-not-selectionned");
+	}	
+
 	$("#texte_pres").text(texte);
+	//Nom de la personne sélectionnée
 	$("#prenom_pres").text(nom);
+	//Citation de la personne sélectionnée
 	$("#citation_pres").text(citation);
+	//Fond d'écran
 	$("#gtco-features").css('background-image', 'url(images/'+image+'.png)');
 	
+
+}
+
+//Lancer le son de la page web
+function playSound(son){
+
+	//On change le son 
+	$("#sound").attr("src", "sound/"+son+".mp3");
+
+	//On joue le son
+	document.querySelector('#sound').play();
+}
+
+function gameSound(note){
+	//On ajoute la note au tableau
+	this.suiteNote.push(note);
+
+	//C'est gagné
+	if(this.suiteNote.join() == "sol,sol,sol,la,si,la,sol,si,la,la,sol"){
+
+		//On affiche la vidéo
+		document.getElementById("overlay").style.display = "block";
+
+		//On joue la vidéo
+		document.querySelector('#video_palmashow').play();
+	}
+	
+	//A chaque clic, on annule le timeout
+	clearTimeout(this.timeOut);
+
+	//Au bout de 2 secondes, on réinitialise le tableau
+	this.timeOut = setTimeout(function(){
+		this.suiteNote = [];
+	},2000);
+
+
+
+	console.log(this.suiteNote.join());
 }
 
 $(document).ready(function()
 {
+	var son;
+
 	$("#jb_pres").mouseover(function() { afficher("#jb_pres","jb"); changeText("#jb_pres","mouseover");});
 	$("#jb_pres").mouseout(function() { afficher("#jb_pres","jb_nb"); changeText("#jb_pres","mouseout");});
 
@@ -75,4 +147,32 @@ $(document).ready(function()
 
 	$("#pierre_pres").mouseover(function() { afficher("#pierre_pres","pierre"); changeText("#pierre_pres","mouseover");});
 	$("#pierre_pres").mouseout(function() { afficher("#pierre_pres","pierre_nb"); changeText("#pierre_pres", "mouseout");});
+
+	$("#jb_pres").click(function(){		
+		son = "sol";
+		playSound(son);
+		gameSound(son);
+	});
+
+	$("#adrien_pres").click(function(){
+		son = "la";
+		playSound(son);
+		gameSound(son);
+	});
+
+	$("#coco_pres").click(function(){
+		son = "si";
+		playSound(son);
+		gameSound(son);
+	});
+
+	//Quitter la vidéo du jeu
+	$("#overlay").click(function(){
+		document.getElementById("overlay").style.display = "none";
+		
+		//On stop la vidéo
+		document.querySelector('#video_palmashow').pause();
+		document.querySelector('#video_palmashow').currentTime = 0;
+	});
+
 } );
