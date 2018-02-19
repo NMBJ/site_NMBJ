@@ -43,13 +43,13 @@ body {
 }
 
 a {
-  color: #00B906;
+  color: darkcyan;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #00B906;
+  color: darkcyan;
   outline: none;
   text-decoration: none;
 }
@@ -67,17 +67,17 @@ h1, h2, h3, h4, h5, h6, figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #00B906;
+  background: darkcyan;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #00B906;
+  background: darkcyan;
 }
 
 ::selection {
   color: #fff;
-  background: #00B906;
+  background: darkcyan;
 }
 
 .gtco-container {
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: bold;
 }
 .gtco-nav #gtco-logo em {
-  color: #00B906;
+  color: darkcyan;
 }
 .gtco-nav a {
   padding: 0px 10px;
@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.5s;
 }
 .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
-  color: #00B906;
+  color: darkcyan;
 }
 .gtco-nav ul li.has-dropdown {
   position: relative;
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-nav ul li.btn-cta a span {
   border: none !important;
-  background: #00B906;
+  background: darkcyan;
   padding: 4px 20px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
 }
 .gtco-nav ul li.active > a {
-  color: #00B906 !important;
+  color: darkcyan !important;
 }
 
 #gtco-header .gtco-video-link a {
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
 }
 .gtco-cover a {
-  color: #00B906;
+  color: darkcyan;
 }
 .gtco-cover a:hover {
   color: white;
@@ -500,7 +500,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #00B906;
+  color: darkcyan;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -606,7 +606,7 @@ form label {
 #gtco-counter .counter {
   font-size: 50px;
   margin-bottom: 10px;
-  color: #00B906;
+  color: darkcyan;
   font-weight: 100;
   display: block;
 }
@@ -712,7 +712,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #00B906;
+  color: darkcyan;
 }
 .feature-center p, .feature-center h3 {
   margin-bottom: 30px;
@@ -738,7 +738,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 40px;
-  color: #00B906;
+  color: darkcyan;
 }
 .feature-left .feature-copy {
   float: right;
@@ -783,7 +783,7 @@ form label {
   margin-left: -25px;
   height: 2px;
   left: 50%;
-  background: #00B906;
+  background: darkcyan;
 }
 .gtco-heading h2.gtco-left:before {
   left: 0;
@@ -854,7 +854,7 @@ form label {
 }
 
 #gtco-subscribe {
-  background: #00B906;
+  background: darkcyan;
 }
 #gtco-subscribe .form-control {
   background: transparent;
@@ -1228,9 +1228,9 @@ form label {
 }
 
 .btn-primary {
-  background: #00B906;
+  background: darkcyan;
   color: #fff;
-  border: 2px solid #00B906 !important;
+  border: 2px solid darkcyan !important;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #00d307 !important;
@@ -1238,11 +1238,11 @@ form label {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #00B906;
-  border: 2px solid #00B906;
+  color: darkcyan;
+  border: 2px solid darkcyan;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #00B906;
+  background: darkcyan;
   color: #fff;
 }
 
@@ -1392,7 +1392,7 @@ form label {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #00B906;
+  border-color: darkcyan;
 }
 
 .row-pb-md {
@@ -1436,7 +1436,7 @@ form label {
   margin-left: 0px;
 }
 .gtco-nav .gtco-contact ul li a i {
-  color: #00B906;
+  color: darkcyan;
 }
 .gtco-nav .gtco-contact ul li a:hover i {
   color: #fff;
@@ -1455,7 +1455,7 @@ form label {
   width: 10%;
   float: left;
   padding: 30px;
-  background: #00B906;
+  background: darkcyan;
   position: relative;
   text-align: center;
 }
@@ -1682,7 +1682,7 @@ form label {
 .owl-theme .owl-dots .owl-dot span {
   width: 10px;
   height: 10px;
-  background: #00B906;
+  background: darkcyan;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1690,12 +1690,12 @@ form label {
 }
 .owl-theme .owl-dots .owl-dot span:hover {
   background: none;
-  border: 2px solid #00B906;
+  border: 2px solid darkcyan;
 }
 
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: none;
-  border: 2px solid #00B906;
+  border: 2px solid darkcyan;
 }
 
 #gtco-faq {
@@ -1745,7 +1745,7 @@ form label {
   transform: rotate(0deg);
 }
 .gtco-accordion.active h3 {
-  color: #00B906;
+  color: darkcyan;
 }
 
 #gtco-contact h3 {

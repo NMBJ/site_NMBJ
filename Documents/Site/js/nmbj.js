@@ -123,10 +123,6 @@ function gameSound(note){
 	this.timeOut = setTimeout(function(){
 		this.suiteNote = [];
 	},2000);
-
-
-
-	console.log(this.suiteNote.join());
 }
 
 $(document).ready(function()
