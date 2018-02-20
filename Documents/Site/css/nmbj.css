@@ -81,3 +81,32 @@
   cursor: pointer; /* Add a pointer on hover */
 }
 
+.animation-bubbles{
+  animation-duration: 5s;
+  animation-name: animation-bubbles;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation-bubbles {
+  0%   {transform: translateY(0px);}
+  100% {transform: translateY(-400px);}
+}
+
+.animation-bubbles{
+  animation-duration: 2s;
+  animation-name: animation-bubbles;
+  animation-iteration-count: infinite;
+}
+
+#score{
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  -moz-user-select: -moz-none;
+}
+
+#gtco-counter{
+  -moz-user-select: -moz-none;
+  background: no-repeat;
+  background-size: 100%;
+  background-image:url(../images/eau.jpeg);
+}

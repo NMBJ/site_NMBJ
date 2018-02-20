@@ -1,4 +1,5 @@
 this.suiteNote = [];
+this.score = 0;
 
 function afficher(asElement,asImg)
 {
@@ -123,16 +124,10 @@ function gameSound(note){
 	this.timeOut = setTimeout(function(){
 		this.suiteNote = [];
 	},2000);
-
-
-
-	console.log(this.suiteNote.join());
 }
 
 $(document).ready(function()
 {
-	var son;
-
 	$("#jb_pres").mouseover(function() { afficher("#jb_pres","jb"); changeText("#jb_pres","mouseover");});
 	$("#jb_pres").mouseout(function() { afficher("#jb_pres","jb_nb"); changeText("#jb_pres","mouseout");});
 
@@ -175,4 +170,32 @@ $(document).ready(function()
 		document.querySelector('#video_palmashow').currentTime = 0;
 	});
 
+
+	for(var i=0; i<10; i++){
+		
+		var image = new Image();
+		image.src = "images/bulle.png";	
+		image.height = (Math.random())*20+50;
+		image.style = "animation-delay:"+10*Math.random()+"s;left:"+(Math.random())*1400+"px; position:absolute; z-index:2;";
+		image.id = "bubble"+i;
+		$("#containerBubble").append(image);
+		$('#bubble'+i).attr('class', 'animation-bubbles'); 
+		$('#bubble'+i).click(function(){
+
+			//On supprime la bulle
+			this.remove();
+			//On actualise le score
+			setScore(getScore()+1);
+			//On affiche le score
+			$('#score').text(getScore());
+		}); 
+	}	
 } );
+
+function setScore(score){
+	this.score = score;
+}
+
+function getScore(){
+	return this.score;
+}
