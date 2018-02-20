@@ -280,11 +280,64 @@
 
 									<script>
 									function myMap() {
+									var myLatLngPc = {lat: 47.75, lng: -1.19};
+									var myLatLngClf = {lat: 45.73, lng: 3.15};
+									var myLatLngStdf = {lat: 48.92, lng: 2.36};
+
 									var mapProp= {
 										center:new google.maps.LatLng(45.78,3.04),
 										zoom:5,
 									};
 									var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+									var contentStringPc =	'<h1>Concert des NMBJ à Pouancé</h1>'+'<h2>La ferme de l herberie le 24/02/2018 à 20h</h2>';
+									var contentStringClf =	'<h1>Concert des NMBJ à Clermont Ferrand</h1>'+'<h2>Zénith d auvergne le 03/03/2018 à 20h</h2>';
+									var contentStringStdf =	'<h1>Concert des NMBJ au Stade de France</h1>'+'<h2>Stade de france le 17/03/2018 à 21h</h2>';
+
+
+									var infowindowPc = new google.maps.InfoWindow({
+										content: contentStringPc
+									});
+
+									var infowindowClf = new google.maps.InfoWindow({
+										content: contentStringClf
+									});
+
+									var infowindowStdf = new google.maps.InfoWindow({
+										content: contentStringStdf
+									});
+
+									var markerPc = new google.maps.Marker({
+									position: myLatLngPc,
+									map: map,
+									title: 'Pouancé'
+								});
+
+									var markerClf = new google.maps.Marker({
+									position: myLatLngClf,
+									map: map,
+									title: 'Clermont Ferrand'
+								});
+
+								var markerStdf = new google.maps.Marker({
+									position: myLatLngStdf,
+									map: map,
+									title: 'Stade de France'
+								});
+
+								markerPc.addListener('click', function() {
+									infowindowPc.open(map, markerPc);
+								});
+
+								markerClf.addListener('click', function() {
+									infowindowClf.open(map, markerClf);
+								});
+
+								markerStdf.addListener('click', function() {
+									infowindowStdf.open(map, markerStdf);
+								});
+
+
 									}
 									</script>
 									
