@@ -59,6 +59,15 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+			/* Always set the map height explicitly to define the size of the div
+			 * element that contains the map. */
+			#map {
+			  height: 100%;
+			}
+	 </style>
+	  
+
 	</head>
 	<body>
 		
@@ -75,12 +84,11 @@
 					<ul>
 						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
 						<li><a href="#" data-nav-section="presentation">NMB quoi ?!!</a></li>
-						<li><a href="#" data-nav-section="sonotheque">Sonothèque</a></li>
-						<li><a href="#" data-nav-section="faq">Concerts</a></li>
+						<li><a href="#" data-nav-section="how-it-works">Sonothèque</a></li>
+						<li><a href="#" data-nav-section="concert">Concerts</a></li>
 						<li><a href="#" data-nav-section="game">Jeux</a></li>
+						<li><a href="#" data-nav-section="products">Products</a></li>
 						<li><a href="#" data-nav-section="contact">Contact</a></li>
-						<li><a href="http://gettemplates.co" class="external" title="You will be navigated to the external pages">Login</a></li>
-						<li class="btn-cta"><a href="http://gettemplates.co" class="external" title="You will be navigated to the external pages"><span>Sign up for free</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -187,88 +195,105 @@
 
 	
 
-	<div class="gtco-section" id="gtco-faq" data-section="faq">
+	<div class="gtco-section" id="gtco-concert" data-section="concert">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
 					<h2>Concerts</h2>
-					<p>Selectionner une date de concerts pour voir la date et le lieu du concert</p>
+					<div>
+						<p>Retrouver les NMBJ en concerts dans toute la France</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-
 					<div class="gtco-accordion">
 						<div class="gtco-accordion-heading">
 							<div class="icon"><i class="icon-cross"></i></div>
-							<p>Selectionner une date de concerts pour voir la date et le lieu du concert</p>
+							<h3>Vous voulez faire une recherche par dates de concerts?</h3>
 						</div>
 						<div class="gtco-accordion-content">
 							<div class="inner">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							</div>
+									<iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=f57ap5dfjrruqbcdfubr1c1um0%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FParis" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>						
+								</div>
 						</div>
 					</div>
-					<div class="gtco-accordion">
-						<div class="gtco-accordion-heading">
-							<div class="icon"><i class="icon-cross"></i></div>
-							<h3>I have technical problem, who do I email?</h3>
-						</div>
-						<div class="gtco-accordion-content">
-							<div class="inner">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							</div>
-						</div>
-					</div>
-					<div class="gtco-accordion">
-						<div class="gtco-accordion-heading">
-							<div class="icon"><i class="icon-cross"></i></div>
-							<h3>How do I use Usable features?</h3>
-						</div>
-						<div class="gtco-accordion-content">
-							<div class="inner">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							</div>
-						</div>
-					</div>
-
 				</div>
 				<div class="col-md-6">
+					<div class="gtco-accordion">
+						<div class="gtco-accordion-heading">
+							<div class="icon"><i class="icon-cross"></i></div>
+							<h3>Vous voulez faire une recherche par lieux de concerts?</h3>
+						</div>
+						<div class="gtco-accordion-content">
+							<div class="inner">
+									<div id="googleMap" style="width:100%;height:400px;"></div>
 
-					<div class="gtco-accordion">
-						<div class="gtco-accordion-heading">
-							<div class="icon"><i class="icon-cross"></i></div>
-							<h3>What language are available?</h3>
-						</div>
-						<div class="gtco-accordion-content">
-							<div class="inner">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							</div>
-						</div>
-					</div>
-					<div class="gtco-accordion">
-						<div class="gtco-accordion-heading">
-							<div class="icon"><i class="icon-cross"></i></div>
-							<h3>Can I have a username that is already taken?</h3>
-						</div>
-						<div class="gtco-accordion-content">
-							<div class="inner">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							</div>
-						</div>
-					</div>
-					<div class="gtco-accordion">
-						<div class="gtco-accordion-heading">
-							<div class="icon"><i class="icon-cross"></i></div>
-							<h3>Is Usable free?</h3>
-						</div>
-						<div class="gtco-accordion-content">
-							<div class="inner">
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							</div>
-						</div>
-					</div>
+									<script>
+									function myMap() {
+									var myLatLngPc = {lat: 47.75, lng: -1.19};
+									var myLatLngClf = {lat: 45.73, lng: 3.15};
+									var myLatLngStdf = {lat: 48.92, lng: 2.36};
 
+									var mapProp= {
+										center:new google.maps.LatLng(45.78,3.04),
+										zoom:5,
+									};
+									var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+									var contentStringPc =	'<h1>Concert des NMBJ à Pouancé</h1>'+'<h2>La ferme de l herberie le 24/02/2018 à 20h</h2>';
+									var contentStringClf =	'<h1>Concert des NMBJ à Clermont Ferrand</h1>'+'<h2>Zénith d auvergne le 03/03/2018 à 20h</h2>';
+									var contentStringStdf =	'<h1>Concert des NMBJ au Stade de France</h1>'+'<h2>Stade de france le 17/03/2018 à 21h</h2>';
+
+
+									var infowindowPc = new google.maps.InfoWindow({
+										content: contentStringPc
+									});
+
+									var infowindowClf = new google.maps.InfoWindow({
+										content: contentStringClf
+									});
+
+									var infowindowStdf = new google.maps.InfoWindow({
+										content: contentStringStdf
+									});
+
+									var markerPc = new google.maps.Marker({
+									position: myLatLngPc,
+									map: map,
+									title: 'Pouancé'
+								});
+
+									var markerClf = new google.maps.Marker({
+									position: myLatLngClf,
+									map: map,
+									title: 'Clermont Ferrand'
+								});
+
+								var markerStdf = new google.maps.Marker({
+									position: myLatLngStdf,
+									map: map,
+									title: 'Stade de France'
+								});
+
+								markerPc.addListener('click', function() {
+									infowindowPc.open(map, markerPc);
+								});
+
+								markerClf.addListener('click', function() {
+									infowindowClf.open(map, markerClf);
+								});
+
+								markerStdf.addListener('click', function() {
+									infowindowStdf.open(map, markerStdf);
+								});
+
+
+									}
+									</script>
+									
+									<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5YjpspDTYQCJUWvaqX1AuZCWg95C9_mg&callback=myMap"></script>							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -324,110 +349,21 @@
 
 	
 
-	<div id="gtco-subscribe">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Subscribe</h2>
-					<p>Be the first to know about the new templates.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Your Email">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="text" class="form-control" id="name" placeholder="Your Name">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-danger btn-block">Subscribe</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
 	
-	<div id="gtco-contact" data-section="contact" class="gtco-cover gtco-cover-xs" style="background-image:url(images/img_bg_2.jpg);">
+	<div id="gtco-contact" data-section="contact" class="gtco-cover gtco-cover-xs" style="background-image:url(images/img_bg_1.jpg);">
 		<div class="overlay"></div>
 		<div class="gtco-container">
 			<div class="row text-center">
 				<div class="display-t">
 					<div class="display-tc">
 						<div class="col-md-12">
-							<h3>If you have inqueries please email us at <a href="#">info@yourdomain.com</a></h3>
+							<h3>Si vous voulez prendre contact avec nous <a href="#">Contact@NMBJ.com</a></h3>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-
-	<footer id="gtco-footer" role="contentinfo">
-		<div class="gtco-container">
-			<div class="row row-pb-md">
-
-				<div class="col-md-4">
-					<div class="gtco-widget">
-						<h3>About Us</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos molestias quod sint ipsum possimus temporibus officia iste perspiciatis consectetur in fugiat repudiandae cum. Totam cupiditate nostrum ut neque ab?</p>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-md-push-1">
-					<div class="gtco-widget">
-						<h3>Links</h3>
-						<ul class="gtco-footer-links">
-							<li><a href="#">Knowledge Base</a></li>
-							<li><a href="#">Career</a></li>
-							<li><a href="#">Press</a></li>
-							<li><a href="#">Terms of services</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-md-4">
-					<div class="gtco-widget">
-						<h3>Get In Touch</h3>
-						<ul class="gtco-quick-contact">
-							<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@gettemplates.co</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
-						</ul>
-					</div>
-				</div>
-
-			</div>
-
-			<div class="row copyright">
-				<div class="col-md-12">
-					<p class="pull-left">
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a></small>
-					</p>
-					<p class="pull-right">
-						<ul class="gtco-social-icons pull-right">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</footer>
+	</div>	
 	</div>
 
 	<div class="gototop js-top">
@@ -451,6 +387,8 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	
 
 	</body>
 </html>
