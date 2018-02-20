@@ -1,6 +1,6 @@
 this.suiteNote = [];
 this.score = 0;
-
+var play = false;
 function afficher(asElement,asImg)
 {
 	//Modification de l'image
@@ -95,12 +95,29 @@ function changeText(asElement,event){
 
 //Lancer le son de la page web
 function playSound(son){
-
 	//On change le son 
 	$("#sound").attr("src", "sound/"+son+".mp3");
-
 	//On joue le son
 	document.querySelector('#sound').play();
+}
+function playMusique(son){
+	//On change de musique 
+	$("#sound").attr("src", "sound/"+son+".mp3");
+	if(play==false)
+	{
+		//On joue le son
+		document.querySelector('#sound').play();
+		//Animation : Photo qui tourne dans le sens inverse des aiguilles d'une montre
+		$("#Vinyl").addClass("play-vinyl");
+		play = true;
+	}
+	else
+	{
+		//on arrete le son
+		document.querySelector('#sound').pause();
+		play = false;
+		$("#Vinyl").removeClass("play-vinyl");
+	}	
 }
 
 function gameSound(note){
@@ -117,7 +134,7 @@ function gameSound(note){
 		document.querySelector('#video_palmashow').play();
 	}
 	
-	//A chaque clic, on annule le timeout
+ 	//A chaque clic, on annule le timeout
 	clearTimeout(this.timeOut);
 
 	//Au bout de 2 secondes, on réinitialise le tableau
@@ -159,6 +176,10 @@ $(document).ready(function()
 		son = "si";
 		playSound(son);
 		gameSound(son);
+	});
+	$("#sentinelle").click(function(){
+		son = "Sentinelle";
+		playMusique(son);
 	});
 
 	//Quitter la vidéo du jeu
