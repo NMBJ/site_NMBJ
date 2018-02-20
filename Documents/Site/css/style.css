@@ -650,7 +650,7 @@ form label {
 #gtco-services,
 #gtco-subscribe,
 #gtco-footer,
-#gtco-faq,
+#gtco-concert,
 .gtco-section {
   padding: 7em 0;
   clear: both;
@@ -663,7 +663,7 @@ form label {
   #gtco-services,
   #gtco-subscribe,
   #gtco-footer,
-  #gtco-faq,
+  #gtco-concert,
   .gtco-section {
     padding: 3em 0;
   }
@@ -674,7 +674,7 @@ form label {
 #gtco-services.border-bottom,
 #gtco-subscribe.border-bottom,
 #gtco-footer.border-bottom,
-#gtco-faq.border-bottom,
+#gtco-concert.border-bottom,
 .gtco-section.border-bottom {
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1703,7 +1703,7 @@ form label {
   border: 2px solid darkcyan;
 }
 
-#gtco-faq {
+#gtco-concert {
   background: #efefef;
 }
 
