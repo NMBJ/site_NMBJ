@@ -1,3 +1,112 @@
+@font-face{
+  font-family: 'Season_PersonalUseOnly';
+  src: url('../fonts/Snowballs Season_PersonalUseOnly.otf');
+}
+
+
+#gtco-features{
+  background: no-repeat;
+  background-size: 100%;
+  background-image:url(../images/micro.png);
+}
+
 .img-pres {
   border-radius: 100px;
+}
+
+.title_pres{
+  font-size: 60px;
+  color: darkcyan;
+  font-family: Season_PersonalUseOnly;
+
+}
+
+.option-selectioned{
+  font-size: 20px;
+  color: darkcyan;
+}
+
+.option-not-selectioned{
+  font-size: 16px;
+  color: "#777";
+}
+
+#citation_pres{
+  font-size: 40px;
+  color: darkcyan;
+  font-family: Season_PersonalUseOnly;
+}
+
+.artist-selectionned {
+  animation-duration: 0.1s;
+  animation-name: artist-selectionned;
+
+  border-width:3px;
+  border-style:dotted;
+  border-color:black;
+  
+}
+
+@keyframes artist-selectionned {
+  0%   {transform: rotate3d(0, 0, 1, 90deg);}
+  25%  {transform: rotate3d(0, 0, 1, 180deg);}
+  50%  {transform: rotate3d(0, 0, 1, 270deg);}
+  100% {transform: rotate3d(0, 0, 1, 360deg);}
+}
+
+.artist-not-selectionned {
+  animation-duration: 0.1s;
+  animation-name: artist-not-selectionned;
+  
+}
+
+@keyframes artist-not-selectionned {
+  0%   {transform: rotate3d(0, 0, 1, -90deg);}
+  25%  {transform: rotate3d(0, 0, 1, -180deg);}
+  50%  {transform: rotate3d(0, 0, 1, -270deg);}
+  100% {transform: rotate3d(0, 0, 1, -360deg);}
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.animation-bubbles{
+  animation-duration: 5s;
+  animation-name: animation-bubbles;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation-bubbles {
+  0%   {transform: translateY(0px);}
+  100% {transform: translateY(-400px);}
+}
+
+.animation-bubbles{
+  animation-duration: 2s;
+  animation-name: animation-bubbles;
+  animation-iteration-count: infinite;
+}
+
+#score{
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  -moz-user-select: -moz-none;
+}
+
+#gtco-counter{
+  -moz-user-select: -moz-none;
+  background: no-repeat;
+  background-size: 100%;
+  background-image:url(../images/eau.jpeg);
 }

@@ -48,6 +48,10 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<!-- Modification NMBJ JS -->
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/nmbj.js"></script>
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -73,7 +77,7 @@
 						<li><a href="#" data-nav-section="presentation">NMB quoi ?!!</a></li>
 						<li><a href="#" data-nav-section="sonotheque">Sonothèque</a></li>
 						<li><a href="#" data-nav-section="faq">Concerts</a></li>
-						<li><a href="#" data-nav-section="products">Jeux</a></li>
+						<li><a href="#" data-nav-section="game">Jeux</a></li>
 						<li><a href="#" data-nav-section="contact">Contact</a></li>
 						<li><a href="http://gettemplates.co" class="external" title="You will be navigated to the external pages">Login</a></li>
 						<li class="btn-cta"><a href="http://gettemplates.co" class="external" title="You will be navigated to the external pages"><span>Sign up for free</span></a></li>
@@ -103,7 +107,7 @@
 	</div>
 
 	
-	<div id="gtco-features" class="border-bottom" data-section="presentation">
+	<div id="gtco-features" class="border-bottom presentation" data-section="presentation">
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
@@ -114,38 +118,47 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 					<div class="feature-center">
-						<span class="icon">
-							<i class="ti-vector"></i>
-						</span>
-						<h3>Le groupe en quelques mots</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. </p>
+							<span class="title_pres">
+									<p>Nous</p>
+								</span>
+						<p>Ces cinq petits bambins sont issues de la même promotion d'ingénieur de l'ISTIA. Formé en 4ème année, ce groupe à beaucoup travaillé pour ne faire aucune représentation. Eh oui!! Faute de budget, ce groupe mythique qu'est les NMBJ, n'ont pu atteindre leur rêve ultime : "Le stade de France". </p>
+						<p>Les cinqs amis issues d'options aussi diverses que variées, tel que <span class="agi">AGI</span>, <span class="qsf">QSF</span> ou encore<span class="mis">MIS</span>.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">
 					<div class="feature-center">
-
-						<h2>The Band</h2>
-						<div class="row">
-								<img src="images/jb_nb.jpg" height="100px" class="img-pres" alt="" />
-								<img src="images/adrien_nb.jpg" height="100px" class="img-pres" alt="" />
-								<img src="images/corentin_nb.jpg" height="100px" class="img-pres" alt="" />
+						<span class="title_pres">
+							<p>The Band</p>
+						</span>
+						<audio id="sound" src="sound/sol.mp3"></audio>
+						<!-- Gestion de la pop up -->
+						<div id="overlay">
+							<video id="video_palmashow" src="videos/ca-mvenere-palmashow.mp4"></video>
+						</div>
+						<!-- Images des membres du groupe -->
+						<div class="row">								
+								<img id="jb_pres" src="images/jb_nb.jpg" height="150px" class="img-pres" alt="" />								
+								<img id="adrien_pres" src="images/adrien_nb.jpg" height="150px" class="img-pres" alt="" />
+								<img id="coco_pres" src="images/corentin_nb.jpg" height="150px" class="img-pres" alt="" />
 						</div>
 						<div class="row">
-								<img src="images/felix_nb.jpg" height="100px" class="img-pres" alt="" />
-								<img src="images/pierre_nb.jpg" height="100px" class="img-pres" alt="" />
+								<img id="fefe_pres" src="images/felix_nb.jpg" height="150px" class="img-pres" alt="" />
+								<img id="pierre_pres" src="images/pierre_nb.jpg" height="150px" class="img-pres" alt="" />
 						</div>
 						
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="feature-center">
-						<span class="prenom">
-							<h1>Who is he?</h1>
+						<span class="title_pres">
+							<p id="prenom_pres">Who?</p>
 						</span>
-						<h3>Web Development</h3>
-						<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. </p>
+						<p id="texte_pres">Glissez votre souris sur les photos des membres du groupe, afin d'afficher leur biographie.</p>
 					</div>
 				</div>
+			</div>
+			<div class="row text-center">
+				<p id = "citation_pres"></p>
 			</div>
 		</div>
 	</div>
@@ -204,8 +217,13 @@
 		<div class="gtco-container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Frequently Ask Questions</h2>
+<<<<<<< HEAD
+					<h2>Concerts</h2>
+					<p>Selectionner une date de concerts pour voir la date et le lieu du concert</p>
+=======
+					<h2>Comment va</h2>
 					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+>>>>>>> 2d7297e78d1fc7a0a679a7350a96f107fc19a7df
 				</div>
 			</div>
 			<div class="row">
@@ -214,7 +232,7 @@
 					<div class="gtco-accordion">
 						<div class="gtco-accordion-heading">
 							<div class="icon"><i class="icon-cross"></i></div>
-							<h3>What is Usable?</h3>
+							<p>Selectionner une date de concerts pour voir la date et le lieu du concert</p>
 						</div>
 						<div class="gtco-accordion-content">
 							<div class="inner">
@@ -288,57 +306,22 @@
 	</div>
 
 
-	<div id="gtco-counter" class="gtco-section">
+	<div id="gtco-counter" class="gtco-section" data-section="game">
 		<div class="gtco-container">
 
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>Fun Facts</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>Mini jeu</h2>
+					<p>Explosez un maximum de bulles !!!!</p>
+					<p id="score">0</p>
 				</div>
 			</div>
 
 			<div class="row">
-				
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-					<div class="feature-center">
-						<span class="icon">
-							<i class="ti-download"></i>
-						</span>
-						<span class="counter js-counter" data-from="0" data-to="2122070" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Downloads</span>
-
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-					<div class="feature-center">
-						<span class="icon">
-							<i class="ti-face-smile"></i>
-						</span>
-						<span class="counter js-counter" data-from="0" data-to="402002" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Happy Clients</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-					<div class="feature-center">
-						<span class="icon">
-							<i class="ti-briefcase"></i>
-						</span>
-						<span class="counter js-counter" data-from="0" data-to="402" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Projects Done</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-					<div class="feature-center">
-						<span class="icon">
-							<i class="ti-time"></i>
-						</span>
-						<span class="counter js-counter" data-from="0" data-to="212023" data-speed="5000" data-refresh-interval="50">1</span>
-						<span class="counter-label">Hours Spent</span>
-
-					</div>
-				</div>
-					
+					<!-- <img src="images/piscine.jpg">	 -->
+					<div id="containerBubble">
+			
+					</div>		
 			</div>
 		</div>
 	</div>
