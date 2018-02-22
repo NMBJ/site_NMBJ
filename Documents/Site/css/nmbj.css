@@ -3,6 +3,11 @@
   src: url('../fonts/Snowballs Season_PersonalUseOnly.otf');
 }
 
+@font-face{
+  font-family: 'apalu';
+  src: url('../fonts/Apalu.ttf');
+}
+
 
 #gtco-features{
   background: no-repeat;
@@ -67,7 +72,7 @@
   100% {transform: rotate3d(0, 0, 1, -360deg);}
 }
 
-#overlay {
+.overlay {
   position: fixed; /* Sit on top of the page content */
   display: none; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
@@ -100,6 +105,7 @@
 
 #score{
   font-size: 50px;
+  text-shadow: 2px 2px 4px black;
   color: rgb(255, 255, 255);
   -moz-user-select: -moz-none;
 }
@@ -109,16 +115,79 @@
   background: no-repeat;
   background-size: 100%;
   background-image:url(../images/eau.jpeg);
+
 }
-.play-vinyl {
-  animation-duration: 10s;
-  animation-name: play-vinyl;
+
+.rotate-vinyl {
+  animation-duration: 2s;
+  animation-name: rotate-vinyl;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@keyframes play-vinyl {
-  0%   {transform: rotate3d(0, 0, 1, 90deg);}
-  25%  {transform: rotate3d(0, 0, 1, 180deg);}
-  50%  {transform: rotate3d(0, 0, 1, 270deg);}
+@keyframes rotate-vinyl {
+  0%   {transform: rotate3d(0, 0, 1, 0deg);}
   100% {transform: rotate3d(0, 0, 1, 360deg);}
 }
+
+.play-vinyl {
+  animation-duration: 1s;
+  animation-name: play-vinyl;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes play-vinyl {
+  0%   {transform: rotate3d(0, 0, 1, 0deg);}
+  100% {transform: rotate3d(0, 0, 1, -45deg);}
+}
+
+.stop-vinyl {
+  animation-duration: 1s;
+  animation-name: stop-vinyl;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes stop-vinyl {
+  0%   {transform: rotate3d(0, 0, 1, -45deg);}
+  100% {transform: rotate3d(0, 0, 1, 0deg);}
+}
+
+.game-win {
+  animation-duration: 4s;
+  animation-name: game-win;
+  animation-fill-mode: both;
+}
+
+@keyframes game-win {
+  0%   {transform: scale3d(1, 1, 1);}
+  100% {transform: scale3d(1.5, 1.5, 1.5);}
+}
+
+.textGame{
+  text-shadow: 0px 0px 2px white;
+}
+
+#Vinyl
+{
+  float: right;
+}
+
+.text-title-selectionned{
+  color: darkcyan;
+  font-family: apalu;
+  font-size: 50px;
+  left: 50px;
+  position:absolute;
+  text-shadow: 1px 1px 2px black;
+}
+
+.text-title-not-selectionned{
+  color: gray;
+  font-family: apalu;
+  font-size: 50px;
+  left: 50px;
+  position:absolute;
+}
+
